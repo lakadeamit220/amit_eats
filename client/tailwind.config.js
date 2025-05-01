@@ -18,8 +18,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        orange:"var(--button)",
-        hoverOrange:"var(--hoverButtonColor)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
