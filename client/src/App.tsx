@@ -4,6 +4,7 @@ import ResetPassword from "./components/auth/ResetPassword";
 import Signup from "./components/auth/Signup"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VerifyEmail from "./components/auth/VerifyEmail";
+import Navbar from "./components/navbar/Navbar";
 
 const appRouter = createBrowserRouter([
   {
@@ -26,13 +27,16 @@ const appRouter = createBrowserRouter([
     path: "/verify-email",
     element: <VerifyEmail />
   },
+  {
+    path: "/",
+    element: <Navbar />
+  },
 ])
 
 function App() {
   return (
     <>
       <RouterProvider router={appRouter}>
-
       </RouterProvider>
     </>
   )
