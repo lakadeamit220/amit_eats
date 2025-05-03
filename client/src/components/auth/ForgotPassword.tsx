@@ -5,8 +5,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
-    const [email, setEmail] = useState<string>("");
-    const loading =  false;
+  const [email, setEmail] = useState<string>("");
+  const loading = false;
 
   return (
     <div className="flex items-center justify-center min-h-screen w-full">
@@ -16,25 +16,25 @@ const ForgotPassword = () => {
           <p className="text-sm text-gray-600">Enter your email address to reset your password</p>
         </div>
         <div className="relative w-full">
-            <Input
+          <Input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your Email"
             className="pl-10"
-            />
-            <Mail className="absolute inset-y-2 left-2 text-gray-600 pointer-events-none"/>
+          />
+          <Mail className="absolute inset-y-2 left-2 text-gray-600 pointer-events-none" />
         </div>
         {
-            loading ? (
-                <Button disabled className="bg-[#D19254] hover:bg-[#D18C47]"><Loader2 className="mr-2 h-4 w-4 animate-spin"/> Please wait</Button>
-            ) : (
-                <Button className="bg-[#D19254] hover:bg-[#D18C47]">Send Reset Link</Button>
-            )
+          loading ? (
+            <Button disabled className="bg-[#D19254] hover:bg-[#D18C47]"><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait</Button>
+          ) : (
+            <Button className="bg-[#D19254] hover:bg-[#D18C47]">Send Reset Link</Button>
+          )
         }
         <span className="text-center">
-            Back to{" "}
-            <Link to="/login" className="text-blue-500">Login</Link>
+          Back to{" "}
+          <Link to="/login" className="text-blue-500">Login</Link>
         </span>
       </form>
     </div>
