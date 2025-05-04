@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VerifyEmail from "./components/auth/VerifyEmail";
 import Layout from "./components/layout/Layout";
 import Hero from "./components/hero/Hero";
+import Profile from "./components/profile/Profile";
 
 const appRouter = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Hero />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       }
     ]
   },
