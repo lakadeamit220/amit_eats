@@ -24,19 +24,19 @@ const HereSection = () => {
           <Input
             type="text"
             value={searchText}
-            placeholder="Search restaurant by name, city & country"
+            placeholder="Search restaurant by name, city & country."
             onChange={(e) => setSearchText(e.target.value)}
             className="pl-10 shadow-lg"
           />
           <Search className="text-gray-500 absolute inset-y-2 left-2" />
-          <Button onClick={() => navigate(`/search/${searchText}`)} className="bg-orange hover:bg-hoverOrange">Search</Button>
+          <Button onClick={() => navigate(`/search/${searchText}`)} className="bg-[#D19254] hover:bg-[#D18C47">Search</Button>
         </div>
       </div>
       <div>
-        <img 
-        src={hero} 
-        alt="" 
-        className="object-cover w-full max-h-[500px]"
+        <img
+          src={hero}
+          alt=""
+          className="object-cover w-full max-h-[500px]"
         />
       </div>
     </div>
