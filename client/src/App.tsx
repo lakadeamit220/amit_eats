@@ -8,6 +8,7 @@ import Layout from "./components/layout/Layout";
 import Hero from "./components/hero/Hero";
 import Profile from "./components/profile/Profile";
 import Search from "./components/search/Search";
+import Restaurant from "./components/restaurant/Restaurant";
 
 const appRouter = createBrowserRouter([
   {
@@ -23,8 +24,12 @@ const appRouter = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "/search",
+        path: "/search/:text",
         element: <Search />,
+      },
+      {
+        path: "/restaurant/:id",
+        element: <Restaurant />,
       },
     ]
   },

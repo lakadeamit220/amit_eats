@@ -90,8 +90,7 @@ const Search = () => {
                       </div>
                     </CardContent>
                     <CardFooter className="p-4 border-t dark:border-t-gray-700 border-t-gray-100 text-white flex justify-end">
-                      <Link to="/home"
-                      // {`/restaurant/${restaurant._id}`}
+                      <Link to={`/restaurant/${123}`}
                       >
                         <Button className="bg-[#D19254] hover:bg-[#D18C47] font-semibold py-2 px-4 rounded-full shadow-md transition-colors duration-200">
                           View Menus
