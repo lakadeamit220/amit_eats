@@ -8,7 +8,7 @@ import Layout from "./components/layout/Layout";
 import Hero from "./components/hero/Hero";
 import Profile from "./components/profile/Profile";
 import Search from "./components/search/Search";
-import Restaurant from "./components/restaurant/Restaurant";
+import Restaurants from "./components/restaurant/Restaurant";
 
 const appRouter = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/restaurant/:id",
-        element: <Restaurant />,
+        element: <Restaurants />,
       },
     ]
   },
