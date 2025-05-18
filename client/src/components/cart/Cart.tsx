@@ -11,12 +11,13 @@ import {
   TableRow,
 } from "../ui/table";
 import { useState } from "react";
+import CheckoutConfirmPage from "./CheckoutConfirmPage";
 //import CheckoutConfirmPage from "./CheckoutConfirmPage";
 //import { useCartStore } from "@/store/useCartStore";
 //import { CartItem } from "@/types/cartType";
 
 const Cart = () => {
-  // const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
   // const { cart, decrementQuantity, incrementQuantity } = useCartStore();
 
   // let totalAmount = cart.reduce((acc, ele) => {
@@ -111,13 +112,13 @@ const Cart = () => {
       </Table>
       <div className="flex justify-end my-5">
         <Button
-          // onClick={() => setOpen(true)}
+          onClick={() => setOpen(true)}
           className="bg-[#D19254] hover:bg-[#D18C47]"
         >
           Proceed To Checkout
         </Button>
       </div>
-      {/* <CheckoutConfirmPage open={open} setOpen={setOpen} /> */}
+      <CheckoutConfirmPage open={open} setOpen={setOpen} />
     </div>
   );
 };
