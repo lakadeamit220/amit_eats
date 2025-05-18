@@ -21,7 +21,7 @@ const Restaurants = () => {
         <div className="relative w-full h-32 md:h-64 lg:h-72">
           <img
             // src={singleRestaurant?.imageUrl || "Loading..."}
-            src={hero}
+            src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="restaurant_image"
             className="object-cover w-full h-full rounded-lg shadow-lg"
           />
@@ -53,6 +53,7 @@ const Restaurants = () => {
           </div>
         </div>
         {/* {singleRestaurant?.menus && <AvailableMenu menus={singleRestaurant?.menus!} />} */}
+        <AvailableMenu />
       </div>
     </div>
   );
