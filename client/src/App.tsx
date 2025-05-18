@@ -9,6 +9,7 @@ import Hero from "./components/hero/Hero";
 import Profile from "./components/profile/Profile";
 import Search from "./components/search/Search";
 import Restaurants from "./components/restaurant/Restaurant";
+import Cart from "./components/cart/Cart";
 
 const appRouter = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element: <Restaurants />,
+      },
+      {
+        path: "/cart",
+        element: <Cart/>
       },
     ]
   },
