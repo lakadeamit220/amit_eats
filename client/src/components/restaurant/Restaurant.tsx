@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import hero from "../../assets/hero_pizza.png";
 
-const Restaurants = () => {
+const Restaurant = () => {
   const params = useParams();
   //const { singleRestaurant, getSingleRestaurant } = useRestaurantStore();
 
@@ -59,4 +59,4 @@ const Restaurants = () => {
   );
 };
 
-export default Restaurants;
+export default Restaurant;

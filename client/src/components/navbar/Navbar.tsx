@@ -31,7 +31,7 @@ const Navbar = () => {
                 <MenubarMenu>
                   <MenubarTrigger>Dashboard</MenubarTrigger>
                   <MenubarContent>
-                    <Link to="/admin/restaurant">
+                    <Link to="/admin/restaurants">
                       <MenubarItem>Restaurant</MenubarItem>
                     </Link>
                     <Link to="/admin/menu">
@@ -110,7 +110,7 @@ const MobileNavbar = () => {
   //const { user, logout, loading } = useUserStore();
   //const { setTheme } = useThemeStore();
   const loading = false;
-  const user=true;
+  const user = true;
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -172,7 +172,7 @@ const MobileNavbar = () => {
                 <span>Menu</span>
               </Link>
               <Link
-                to="/admin/restaurant"
+                to="/admin/restaurants"
                 className="flex items-center gap-4 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
               >
                 <UtensilsCrossed />
@@ -191,7 +191,7 @@ const MobileNavbar = () => {
         <SheetFooter className="flex flex-col gap-4">
           <div className="flex flex-row items-center gap-2">
             <Avatar>
-              <AvatarImage/>
+              <AvatarImage />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <h1 className="font-bold">Amit Lakade</h1>
