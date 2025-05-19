@@ -12,7 +12,6 @@ import {
 } from "../ui/table";
 import { useState } from "react";
 import CheckoutConfirmPage from "./CheckoutConfirmPage";
-//import CheckoutConfirmPage from "./CheckoutConfirmPage";
 //import { useCartStore } from "@/store/useCartStore";
 //import { CartItem } from "@/types/cartType";
 

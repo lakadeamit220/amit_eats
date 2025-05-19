@@ -24,14 +24,14 @@ const CheckoutConfirmPage = ({
   setOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
   // const { user } = useUserStore();
-  // const [input, setInput] = useState({
-  //   name: user?.fullname || "",
-  //   email: user?.email || "",
-  //   contact: user?.contact.toString() || "",
-  //   address: user?.address || "",
-  //   city: user?.city || "",
-  //   country: user?.country || "",
-  // });
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    address: "",
+    city: "",
+    country: "",
+  });
   // const { cart } = useCartStore();
   // const { restaurant } = useRestaurantStore();
   // const { createCheckoutSession, loading } = useOrderStore();
@@ -40,25 +40,26 @@ const CheckoutConfirmPage = ({
     setInput({ ...input, [name]: value });
   };
   const checkoutHandler = async (e: FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
-  //   // api implementation start from here
-  //   try {
-  //     const checkoutData: CheckoutSessionRequest = {
-  //       cartItems: cart.map((cartItem) => ({
-  //         menuId: cartItem._id,
-  //         name: cartItem.name,
-  //         image: cartItem.image,
-  //         price: cartItem.price.toString(),
-  //         quantity: cartItem.quantity.toString(),
-  //       })),
-  //       deliveryDetails: input,
-  //       restaurantId: restaurant?._id as string,
-  //     };
-  //     await createCheckoutSession(checkoutData);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+    e.preventDefault();
+    console.log(input);
+    //   // api implementation start from here
+    //   try {
+    //     const checkoutData: CheckoutSessionRequest = {
+    //       cartItems: cart.map((cartItem) => ({
+    //         menuId: cartItem._id,
+    //         name: cartItem.name,
+    //         image: cartItem.image,
+    //         price: cartItem.price.toString(),
+    //         quantity: cartItem.quantity.toString(),
+    //       })),
+    //       deliveryDetails: input,
+    //       restaurantId: restaurant?._id as string,
+    //     };
+    //     await createCheckoutSession(checkoutData);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+  };
   const loading = false;
 
   return (
@@ -74,21 +75,21 @@ const CheckoutConfirmPage = ({
           className="md:grid grid-cols-2 gap-2 space-y-1 md:space-y-0"
         >
           <div>
-            <Label>Full Name</Label>
+            <Label>Name</Label>
             <Input
               type="text"
               name="name"
-              // value={input.name}
+              value={input.name}
               onChange={changeEventHandler}
             />
           </div>
           <div>
             <Label>Email</Label>
             <Input
-              disabled
+              
               type="email"
               name="email"
-              // value={input.email}
+              value={input.email}
               onChange={changeEventHandler}
             />
           </div>
@@ -97,7 +98,7 @@ const CheckoutConfirmPage = ({
             <Input
               type="text"
               name="contact"
-              // value={input.contact}
+              value={input.contact}
               onChange={changeEventHandler}
             />
           </div>
@@ -106,7 +107,7 @@ const CheckoutConfirmPage = ({
             <Input
               type="text"
               name="address"
-              // value={input.address}
+              value={input.address}
               onChange={changeEventHandler}
             />
           </div>
@@ -115,7 +116,7 @@ const CheckoutConfirmPage = ({
             <Input
               type="text"
               name="city"
-              // value={input.city}
+              value={input.city}
               onChange={changeEventHandler}
             />
           </div>
@@ -124,7 +125,7 @@ const CheckoutConfirmPage = ({
             <Input
               type="text"
               name="country"
-              // value={input.country}
+              value={input.country}
               onChange={changeEventHandler}
             />
           </div>
