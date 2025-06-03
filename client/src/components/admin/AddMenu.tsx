@@ -162,36 +162,42 @@ const AddMenu = () => {
           </DialogContent>
         </Dialog>
       </div>
-      {/* {restaurant?.menus.map((menu: any, idx: number) => (
-        <div key={idx} className="mt-6 space-y-4">
-          <div className="flex flex-col md:flex-row md:items-center md:space-x-4 md:p-4 p-2 shadow-md rounded-lg border">
-            <img
-              src={menu.image}
-              alt=""
-              className="md:h-24 md:w-24 h-16 w-full object-cover rounded-lg"
-            />
-            <div className="flex-1">
-              <h1 className="text-lg font-semibold text-gray-800">
-                {menu.name}
-              </h1>
-              <p className="text-sm tex-gray-600 mt-1">{menu.description}</p>
-              <h2 className="text-md font-semibold mt-2">
-                Price: <span className="text-[#D19254]">80</span>
-              </h2>
-            </div>
-            <Button
-              onClick={() => {
-                setSelectedMenu(menu);
-                setEditOpen(true);
-              }}
-              size={"sm"}
-              className="bg-orange hover:bg-hoverOrange mt-2"
-            >
-              Edit
-            </Button>
+      {/* {restaurant?.menus.map((menu: any, idx: number) => ( */}
+      <div
+        //  key={idx}
+        className="mt-6 space-y-4">
+        <div className="flex flex-col md:flex-row md:items-center md:space-x-4 md:p-4 p-2 shadow-md rounded-lg border">
+          <img
+            // src={menu.image}
+            src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            className="md:h-24 md:w-24 h-16 w-full object-cover rounded-lg"
+          />
+          <div className="flex-1">
+            <h1 className="text-lg font-semibold text-gray-800">
+              {/* {menu.name} */}Amit
+            </h1>
+            <p className="text-sm tex-gray-600 mt-1">
+              {/* {menu.description} */}
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui consequuntur, vel obcaecati ab explicabo nihil dolorem laudantium accusantium eum impedit dolor nulla minima vitae eaque vero, unde in esse ea?
+              </p>
+            <h2 className="text-md font-semibold mt-2">
+              Price: <span className="text-[#D19254]">80</span>
+            </h2>
           </div>
+          <Button
+            onClick={() => {
+              // setSelectedMenu(menu);
+              setEditOpen(true);
+            }}
+            size={"sm"}
+            className="bg-[#D19254] hover:bg-[#D18C47] mt-2"
+          >
+            Edit
+          </Button>
         </div>
-      ))} */}
+      </div>
+      {/* ))} */}
       {/* <EditMenu
         selectedMenu={selectedMenu}
         editOpen={editOpen}
