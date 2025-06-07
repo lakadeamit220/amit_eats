@@ -14,6 +14,7 @@ import { Loader2, Plus } from "lucide-react";
 import React, { FormEvent, useState } from "react";
 //import EditMenu from "./EditMenu";
 import { MenuFormSchema, menuSchema } from "@/schema/menuSchema";
+import EditMenu from "./EditMenu";
 //import { useMenuStore } from "@/store/useMenuStore";
 //import { useRestaurantStore } from "@/store/useRestaurantStore";
 
@@ -198,11 +199,11 @@ const AddMenu = () => {
         </div>
       </div>
       {/* ))} */}
-      {/* <EditMenu
+      <EditMenu
         selectedMenu={selectedMenu}
         editOpen={editOpen}
         setEditOpen={setEditOpen}
-      /> */}
+      />
     </div>
   );
 };

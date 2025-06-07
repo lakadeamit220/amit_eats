@@ -10,8 +10,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { MenuFormSchema, menuSchema } from "@/schema/menuSchema";
-import { useMenuStore } from "@/store/useMenuStore";
-import { MenuItem } from "@/types/restaurantType";
+// import { useMenuStore } from "@/store/useMenuStore";
+// import { MenuItem } from "@/types/restaurantType";
 import { Loader2 } from "lucide-react";
 import {
   Dispatch,
@@ -37,7 +37,8 @@ const EditMenu = ({
     image: undefined,
   });
   const [error, setError] = useState<Partial<MenuFormSchema>>({});
-  const {loading, editMenu} = useMenuStore();
+  const loading = false;
+  // const {loading, editMenu} = useMenuStore();
 
   const changeEventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type } = e.target;
@@ -54,18 +55,18 @@ const EditMenu = ({
     }
      
     // api ka kaam start from here
-    try {
-      const formData = new FormData();
-      formData.append("name", input.name);
-      formData.append("description", input.description);
-      formData.append("price", input.price.toString());
-      if(input.image){
-        formData.append("image", input.image);
-      }
-      await editMenu(selectedMenu._id, formData);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const formData = new FormData();
+    //   formData.append("name", input.name);
+    //   formData.append("description", input.description);
+    //   formData.append("price", input.price.toString());
+    //   if(input.image){
+    //     formData.append("image", input.image);
+    //   }
+    //   await editMenu(selectedMenu._id, formData);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   useEffect(() => { 
@@ -132,12 +133,12 @@ const EditMenu = ({
           </div>
           <DialogFooter className="mt-5">
             {loading ? (
-              <Button disabled className="bg-orange hover:bg-hoverOrange">
+              <Button disabled className="bg-[#D19254] hover:bg-[#D18C47]">
                 <Loader2 className="mr-2 w-4 h-4 animate-spin" />
                 Please wait
               </Button>
             ) : (
-              <Button className="bg-orange hover:bg-hoverOrange">Submit</Button>
+              <Button className="bg-[#D19254] hover:bg-[#D18C47]">Submit</Button>
             )}
           </DialogFooter>
         </form>
